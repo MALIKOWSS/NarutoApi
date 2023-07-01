@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/narutoFragment">
+
+    <fragment
+        android:id="@+id/narutoFragment"
+        android:name="com.example.narutoapi.ui.fragments.naruto.NarutoFragment"
+        android:label="fragment_naruto"
+        tools:layout="@layout/fragment_naruto" >
+        <action
+            android:id="@+id/action_narutoFragment_to_narutoDetailsFragment"
+            app:destination="@id/narutoDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/narutoDetailsFragment"
+        android:name="com.example.narutoapi.ui.fragments.naruto.details.NarutoDetailsFragment"
+        android:label="fragment_naruto_details"
+        tools:layout="@layout/fragment_naruto_details" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
